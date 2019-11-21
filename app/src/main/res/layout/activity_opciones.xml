@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".OpcionesActivity">
+
+
+    <Button
+        android:id="@+id/btnToCitas"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:text="Citas" />
+
+    <Button
+        android:id="@+id/btnToDentistas"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_rounded"
+        android:text="Dentistas" />
+
+    <Button
+        android:id="@+id/btnToPacientes"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_rounded"
+        android:text="Pacientes" />
+
+
+</LinearLayout>

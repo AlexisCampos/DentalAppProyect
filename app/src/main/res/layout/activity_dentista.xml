@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".DentistaActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DENTISTAS"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+
+    <EditText
+        android:id="@+id/txt_CedulaDentista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Cedula"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_NombreDentista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre(s)"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_ApellidoDentista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_EspecialidadDentista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Especialidad"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_EmailDentista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_TelefonoDentista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="number"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Lista de Dentistas" />
+
+    <ListView
+        android:id="@+id/lst_datosDentistas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

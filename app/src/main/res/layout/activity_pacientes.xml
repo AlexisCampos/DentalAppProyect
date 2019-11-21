@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".PacientesActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PACIENTES"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/txt_NombrePaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_ApellidoPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Apellido(s)"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+
+    <EditText
+        android:id="@+id/txt_EmailPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_TelefonoPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="number"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/txt_NotasPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Notas Generales"
+        android:inputType="text"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Lista de Pacientes" />
+
+    <ListView
+        android:id="@+id/lst_datosPacientes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

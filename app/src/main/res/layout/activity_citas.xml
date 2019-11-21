@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".CitasActivity">
+
+
+    <Button
+        android:id="@+id/btnToOpciones"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:text="Opciones" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CITAS"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
+
+
+    <EditText
+        android:id="@+id/txt_PacienteCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Paciente"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp" />
+
+    <EditText
+        android:id="@+id/txt_DentistaCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Dentista"
+        android:inputType="textPersonName"
+        android:paddingTop="15dp" />
+
+    <EditText
+        android:id="@+id/txt_FechaCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Fecha de la Cita"
+        android:inputType="date"
+        android:paddingTop="15dp" />
+
+    <EditText
+        android:id="@+id/txt_HoraCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Hora de la Cita"
+        android:inputType="time"
+        android:paddingTop="15dp" />
+
+    <EditText
+        android:id="@+id/txt_NotasCitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="text"
+        android:paddingTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Lista de Citas" />
+
+    <ListView
+        android:id="@+id/lst_datosCitas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
