@@ -9,13 +9,6 @@
     tools:context=".CitasActivity">
 
 
-    <Button
-        android:id="@+id/btnToOpciones"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_rounded"
-        android:text="Opciones" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -32,7 +25,8 @@
         android:ems="10"
         android:hint="Paciente"
         android:inputType="textPersonName"
-        android:paddingTop="15dp" />
+        android:paddingTop="12dp"
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/txt_DentistaCita"
@@ -41,7 +35,8 @@
         android:ems="10"
         android:hint="Dentista"
         android:inputType="textPersonName"
-        android:paddingTop="15dp" />
+        android:paddingTop="12dp"
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/txt_FechaCita"
@@ -50,7 +45,8 @@
         android:ems="10"
         android:hint="Fecha de la Cita"
         android:inputType="date"
-        android:paddingTop="15dp" />
+        android:paddingTop="12dp"
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/txt_HoraCita"
@@ -59,16 +55,18 @@
         android:ems="10"
         android:hint="Hora de la Cita"
         android:inputType="time"
-        android:paddingTop="15dp" />
+        android:paddingTop="12dp"
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/txt_NotasCitas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Teléfono"
-        android:inputType="text"
-        android:paddingTop="15dp" />
+        android:hint="Notas"
+        android:inputType="textLongMessage"
+        android:paddingTop="12dp"
+        android:textSize="12sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,7 +78,8 @@
     <ListView
         android:id="@+id/lst_datosCitas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 
 
 </LinearLayout>
