@@ -97,6 +97,8 @@ public class PacientesActivity extends AppCompatActivity {
         });
     }
 
+
+
     private void InitializeFirebase() {
         FirebaseApp.initializeApp(this);
         firebaseDatabase=FirebaseDatabase.getInstance();
