@@ -4,4 +4,6 @@
     <string name="enter_password">Ingrese contraseña</string>
     <string name="registrar">Registrar Usuario</string>
     <string name="login">Iniciar Sesión</string>
+    <string name="formato_fecha">dd/mm/yyyy</string>
+    <string name="formato_hora">hh:mm</string>
 </resources>

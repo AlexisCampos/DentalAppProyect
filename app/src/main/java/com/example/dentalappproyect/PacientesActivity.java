@@ -142,7 +142,7 @@ public class PacientesActivity extends AppCompatActivity {
 
                     databaseReference.child("Pacientes").child(p.getUid()).setValue(p);
                     clearTextDent();
-                    Toast.makeText(PacientesActivity.this,"Paciente agregado :c",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PacientesActivity.this,"Paciente agregado",Toast.LENGTH_SHORT).show();
                 }
 
             }
