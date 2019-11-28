@@ -63,7 +63,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
     Citas citaSelected;
  //   private DatePicker Fecha;
     private ListView listv_citas;
-    private EditText Notas, Fecha;
+    private EditText Notas, Fecha, Hora;
     private Spinner Paciente, Dentista;
 
     @Override
@@ -86,6 +86,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
         ibObtenerHora.setOnClickListener(this);
 
         Fecha = findViewById(R.id.et_mostrar_fecha_picker);
+        Hora = findViewById(R.id.et_mostrar_hora_picker);
         Notas = findViewById(R.id.txt_NotasCitas);
         Paciente = findViewById(R.id.spin_PacienteCita);
         Dentista = findViewById(R.id.spin_DentistaCita);
@@ -105,6 +106,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 citaSelected=(Citas)parent.getItemAtPosition(position);
                 Fecha.setText(citaSelected.getFecha());
+                Hora.setText(citaSelected.getHora());
               //  Paciente.setSelection(citaSelected.getPaciente());
                 Notas.setText(citaSelected.getNotas());
               //  Dentista.setText(citaSelected.getDentista());
@@ -209,12 +211,14 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
         String paciente= Paciente.getSelectedItem().toString();
         String dentista=Dentista.getSelectedItem().toString();
         String notas=Notas.getText().toString();
+        String hora=Hora.getText().toString();
+
 
         switch (item.getItemId())
         {
             case R.id.icon_add:
             {
-                if (fecha.equals("")||paciente.equals("")||dentista.equals("")||notas.equals(""))
+                if (fecha.equals("")||paciente.equals("")||dentista.equals("")||notas.equals("")||hora.equals(""))
                 {
                     validacion();
                 }
@@ -224,6 +228,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
                     c.setUid(UUID.randomUUID().toString());
                     c.setDentista(dentista);
                     c.setFecha(fecha);
+                    c.setHora(hora);
                     c.setNotas(notas);
                     c.setPaciente(paciente);
 
@@ -249,6 +254,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
                 c.setPaciente(Paciente.getSelectedItem().toString().trim());
                 c.setNotas(Notas.getText().toString().trim());
                 c.setFecha(Fecha.getText().toString().trim());
+                c.setHora(Hora.getText().toString().trim());
                 c.setDentista(Dentista.getSelectedItem().toString().trim());
 
                 databaseReference.child("Citas").child(c.getUid()).setValue(c);
@@ -270,15 +276,21 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
         String paciente= Paciente.getSelectedItem().toString();
         String dentista=Dentista.getSelectedItem().toString();
         String notas=Notas.getText().toString();
+        String hora=Hora.getText().toString();
+
 
         if(fecha.equals(""))
         {
             Fecha.setError("Requerido");
+        } else if(hora.equals(""))
+        {
+            Hora.setError("Requerido");
         }
         else if(paciente.equals(""))
         {
             ((TextView)Paciente.getSelectedView()).setError("Requerido");
         }
+
         else if(notas.equals(""))
         {
             Notas.setError("Requerido");
@@ -294,6 +306,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
     {
         Notas.setText("");
         Fecha.setText("");
+        Hora.setText("");
     }
 
     @Override

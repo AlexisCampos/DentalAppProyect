@@ -7,6 +7,7 @@ public class Citas {
     private String paciente;
     private String dentista;
     private String fecha;
+    private String hora;
     private String notas;
 
     public String getUid() {
@@ -48,7 +49,13 @@ public class Citas {
         this.notas = notas;
     }
 
+    public String getHora() {
+        return hora;
+    }
 
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
 
     @Override
     public String toString() {
