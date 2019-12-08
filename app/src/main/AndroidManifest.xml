@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".OpcionesActivity"></activity>
+        <activity android:name=".ConsultasActivity"></activity>
+        <activity android:name=".OpcionesActivity" />
         <activity android:name=".CitasActivity" />
         <activity android:name=".PacientesActivity" />
         <activity android:name=".DentistaActivity" />

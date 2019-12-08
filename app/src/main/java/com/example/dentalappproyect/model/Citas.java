@@ -60,7 +60,7 @@ public class Citas {
     @Override
     public String toString() {
 
-        return "Paciente: " + paciente + " Dentista: " + dentista + " Fecha: "+ fecha + " Notas: " + notas;
+        return "Paciente: " + paciente + " Dentista: " + dentista + " Fecha: "+ fecha+"-"+hora + " Notas: " + notas;
     }
 
 

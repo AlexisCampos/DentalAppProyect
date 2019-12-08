@@ -65,11 +65,23 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
     private ListView listv_citas;
     private EditText Notas, Fecha, Hora;
     private Spinner Paciente, Dentista;
+    private Button btnConsultar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citas);
+
+        btnConsultar=(Button)findViewById(R.id.btnToConsultar);
+
+
+        btnConsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(CitasActivity.this,ConsultasActivity.class);
+                startActivity(i);
+            }
+        });
 
         //Widget EditText donde se mostrara la fecha obtenida
         etFecha = (EditText) findViewById(R.id.et_mostrar_fecha_picker);
@@ -138,7 +150,7 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
                 for(DataSnapshot objSnapShot : dataSnapshot.getChildren()){
                     Citas p = objSnapShot.getValue(Citas.class);
                     listCitas.add(p);
-                    arrayAdapterCitas = new ArrayAdapter<Citas>(CitasActivity.this,android.R.layout.simple_list_item_1,listCitas);
+                    arrayAdapterCitas = new ArrayAdapter<Citas>(CitasActivity.this,R.layout.spinner_item_tamano,listCitas);
                     listv_citas.setAdapter(arrayAdapterCitas);
                 }
             }
@@ -161,8 +173,8 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
                     nombre = nombre + " " + areaSnapshot.child("apellido").getValue(String.class);
                     pacientes.add(nombre);
                 }
-                ArrayAdapter<String> pacientesAdapter = new ArrayAdapter<String>(CitasActivity.this, android.R.layout.simple_spinner_item, pacientes);
-                pacientesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ArrayAdapter<String> pacientesAdapter = new ArrayAdapter<String>(CitasActivity.this,R.layout.spinner_item_tamano, pacientes);
+                pacientesAdapter.setDropDownViewResource(R.layout.spinner_item_tamano);
                 Paciente.setAdapter(pacientesAdapter);
             }
 
@@ -184,8 +196,8 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
                     nombre = nombre + " " + areaSnapshot.child("apellido").getValue(String.class);
                     dentistas.add(nombre);
                 }
-                ArrayAdapter<String> dentistasAdapter = new ArrayAdapter<String>(CitasActivity.this, android.R.layout.simple_spinner_item, dentistas);
-                dentistasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ArrayAdapter<String> dentistasAdapter = new ArrayAdapter<String>(CitasActivity.this, R.layout.spinner_item_tamano, dentistas);
+                dentistasAdapter.setDropDownViewResource(R.layout.spinner_item_tamano);
                 Dentista.setAdapter(dentistasAdapter);
             }
 
