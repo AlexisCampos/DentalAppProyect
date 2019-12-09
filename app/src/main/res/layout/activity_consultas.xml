@@ -14,10 +14,20 @@
         android:layout_height="wrap_content"
         android:text="CONSULTAS"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
+    <EditText
+        android:id="@+id/txt_ConsultarCitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Consultar citas"
+        android:inputType="text"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
 
-
-
-
+    <ListView
+        android:id="@+id/lst_datosCitas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

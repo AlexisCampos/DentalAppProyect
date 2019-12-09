@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DentalAppProyect</string>
+    <string name="app_name">DentalApp</string>
     <string name="enter_email">Ingrese correo</string>
     <string name="enter_password">Ingrese contraseña</string>
     <string name="registrar">Registrar Usuario</string>

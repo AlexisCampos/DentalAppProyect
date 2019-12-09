@@ -10,7 +10,7 @@ public class Pacientes {
 
     @Override
     public String toString() {
-        return nombre;
+        return nombre+" "+apellido;
     }
 
     public String getUid() {

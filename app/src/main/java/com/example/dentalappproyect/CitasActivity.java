@@ -65,17 +65,17 @@ public class CitasActivity extends AppCompatActivity implements View.OnClickList
     private ListView listv_citas;
     private EditText Notas, Fecha, Hora;
     private Spinner Paciente, Dentista;
-    private Button btnConsultar;
+    private Button btnToConsultar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citas);
 
-        btnConsultar=(Button)findViewById(R.id.btnToConsultar);
+        btnToConsultar=(Button)findViewById(R.id.btnToConsultar);
 
 
-        btnConsultar.setOnClickListener(new View.OnClickListener() {
+        btnToConsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(CitasActivity.this,ConsultasActivity.class);

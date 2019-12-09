@@ -62,6 +62,6 @@ public class Dentistas {
 
     @Override
     public String toString() {
-        return nombre;
+        return nombre +"" +apellido;
     }
 }
